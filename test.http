@@ -1,0 +1,9 @@
+POST http://localhost:7071/api/PostTrip
+content-type: application/json
+
+{
+    "payload": 233542151425
+}
+
+###
+GET http://localhost:7071/api/HttpTrigger1
