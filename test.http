@@ -1,9 +1,14 @@
-POST http://localhost:7071/api/PostTrip
+@baseUrl = http://localhost:7071
+###
+# @name simpleRequest
+POST {{baseUrl}}/api/PostTrip/ HTTP/1.1
 content-type: application/json
 
 {
     "payload": 233542151425
 }
-
 ###
-GET http://localhost:7071/api/HttpTrigger1
+@Id = {{simpleRequest.response.body.id}}
+# get order from ASP.NET endpoint
+###
+GET {{baseUrl}}/api/HttpTrigger1?name=Pippo

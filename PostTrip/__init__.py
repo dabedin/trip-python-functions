@@ -6,8 +6,6 @@ import json
 from datetime import datetime
 
 def main(req: func.HttpRequest, doc: func.Out[func.Document]) -> func.HttpResponse:
-    logging.info('Python HTTP trigger function processed a request.')
-
     request_body = req.get_json()
 
     id = str(uuid.uuid4())
@@ -16,9 +14,12 @@ def main(req: func.HttpRequest, doc: func.Out[func.Document]) -> func.HttpRespon
         "content": "arbitrary data of trip {id} uploaded on {date}".format(id=id, date=datetime.today().strftime('%Y-%m-%d-%H:%M:%S')),
         "data": request_body['payload']
     }
-  
+    
+    logging.info('Posted trip id: %s', id)
+
     doc.set(func.Document.from_dict(newproduct_dict))
 
     return func.HttpResponse (
-            json.dumps({'id': id})
-            ) 
+        json.dumps({'id': id})
+        ) 
+
