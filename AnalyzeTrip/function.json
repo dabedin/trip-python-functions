@@ -6,7 +6,7 @@
       "name": "documents",
       "direction": "in",
       "leaseCollectionName": "leases",
-      "connectionStringSetting": "tripsample_DOCUMENTDB",
+      "connectionStringSetting": "CosmosDbConnectionString",
       "databaseName": "tripservice",
       "collectionName": "trips",
       "createLeaseCollectionIfNotExists": true,
