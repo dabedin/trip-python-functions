@@ -8,7 +8,7 @@
       "leaseCollectionName": "leases",
       "connectionStringSetting": "CosmosDbConnectionString",
       "databaseName": "tripservice",
-      "collectionName": "trips",
+      "collectionName": "rawtrips",
       "createLeaseCollectionIfNotExists": true,
       "maxItemsPerInvocation": 1
     },
