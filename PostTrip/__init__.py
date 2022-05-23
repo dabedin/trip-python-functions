@@ -11,6 +11,7 @@ def main(req: func.HttpRequest, doc: func.Out[func.Document]) -> func.HttpRespon
     id = str(uuid.uuid4())
     newproduct_dict = {
         "id": id,
+        "/id": id, 
         "content": "arbitrary data of trip {id} uploaded on {date}".format(id=id, date=datetime.today().strftime('%Y-%m-%d-%H:%M:%S')),
         "data": request_body['payload']
     }
