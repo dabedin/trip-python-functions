@@ -10,6 +10,7 @@
       "databaseName": "tripservice",
       "collectionName": "rawtrips",
       "createLeaseCollectionIfNotExists": true,
+      "maxItemsPerInvocation": 1
     },
     {
       "type": "serviceBus",

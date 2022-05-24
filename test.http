@@ -1,4 +1,5 @@
 @baseUrl = http://localhost:7071
+
 ###
 # @name simpleRequest
 POST {{baseUrl}}/api/PostTrip/ HTTP/1.1
