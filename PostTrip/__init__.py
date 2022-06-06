@@ -1,9 +1,17 @@
-import logging
-
 import azure.functions as func
 import uuid
-import json
 from datetime import datetime
+
+import json
+import logging
+
+import requests
+from opencensus.extension.azure.functions import OpenCensusExtension
+from opencensus.trace import config_integration
+
+config_integration.trace_integrations(['requests'])
+
+OpenCensusExtension.configure()
 
 def main(req: func.HttpRequest, doc: func.Out[func.Document]) -> func.HttpResponse:
     request_body = req.get_json()

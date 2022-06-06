@@ -1,0 +1,4 @@
+traces
+| where operation_Name == "AnalyzeTrip"
+| where timestamp > now() - 10m
+| distinct cloud_RoleInstance
