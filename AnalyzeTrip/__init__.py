@@ -4,11 +4,8 @@ import azure.functions as func
 import json
 import logging
 
-import requests
 from opencensus.extension.azure.functions import OpenCensusExtension
 from opencensus.trace import config_integration
-
-config_integration.trace_integrations(['requests'])
 
 OpenCensusExtension.configure()
 
