@@ -9,7 +9,6 @@ A basic example of [Azure Functions in Python](https://docs.microsoft.com/en-us/
 
 * **ConsumeTrip** class has a Function using the ServiceBusTrigger, [see docs](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-service-bus-trigger?tabs=in-process%2Cextensionv5&pivots=programming-language-python).
 
-Test in (/test.http) is intended to be used with a non protected Function.
-Test in (/test-wAA.http) is for a AAD protected Function, [see docs](https://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad?toc=%2Fazure%2Fazure-functions%2Ftoc.json).
+Test requests in [test.http](/test.http) are intended to be used with a non protected Function, while requests in [test-wAAD.http](/test-wAA.http) are intended for a AAD protected Function, [see docs](https://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad?toc=%2Fazure%2Fazure-functions%2Ftoc.json).
 
 Mutuated from https://github.com/dabedin/trip-functions
