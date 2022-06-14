@@ -1,4 +1,4 @@
-@baseUrl = http://localhost:7071
+@baseUrl = REPLACE
 
 ###
 # @name simpleRequest
@@ -13,5 +13,3 @@ content-type: application/json
 # get order from ASP.NET endpoint
 ###
 GET {{baseUrl}}/api/Test?name=Pippo
-
-
